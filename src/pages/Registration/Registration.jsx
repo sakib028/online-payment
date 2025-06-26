@@ -1,6 +1,7 @@
 import React from "react";
-import { Form, Input, Row, Col, Button } from "antd";
+import { Form, Input, Row, Col, Button, Divider } from "antd";
 import FormItem from "../../ui/FormItem";
+import { Link } from "react-router-dom";
 
 export default function Registration() {
   const onFinish = (values) => {
@@ -14,8 +15,11 @@ export default function Registration() {
           <h1 className="text-2xl font-bold text-center mb-6 text-white">
             Registration
           </h1>
-          <h1 className="text-sm underline">Already a Member? Login</h1>
+          <Link to="/Login">
+            <h1 className="text-sm underline">Already a Member? Login</h1>
+          </Link>
         </div>
+        <Divider className="border border-[#433878]" />
 
         <Form layout="vertical" onFinish={onFinish}>
           <Row gutter={16}>
